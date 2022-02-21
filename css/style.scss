@@ -1,11 +1,19 @@
 $main_color:#e07d6a;
-
+body {
+    // scroll-behavior: smooth;
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-family: 'Zen Maru Gothic', sans-serif;
+    // scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: #e07d6a;
+
 }
 
 @media (max-width: 767px) {

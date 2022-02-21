@@ -73,37 +73,8 @@ $main_color:#e07d6a;
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 3;
+    z-index: 1;
     background-color: $main_color;
-    .closebtn{
-        
-        // border: solid 1px;
-        // display: flex;
-        // justify-content: flex-end;
-        
-       
-        .close-wrap{
-            position: relative;
-            width: 100%;
-            cursor: pointer;
-            
-        }
-        .line{
-            // left: 78%;
-            // top: 40px;
-         
-            position: absolute;
-        }
-       
-        .line:nth-child(1){
-            transform: rotate(330deg);
-           
-        }
-        .line:nth-child(2){
-            transform: rotate(30deg);
-            
-        }
-    }
     .logowrap{
         display: flex;
         justify-content: center;

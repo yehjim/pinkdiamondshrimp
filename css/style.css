@@ -7,6 +7,11 @@
   font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #e07d6a;
+}
+
 @media (max-width: 767px) {
   .labtoppic,
   .phonepic {

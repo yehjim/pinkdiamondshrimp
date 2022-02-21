@@ -55,28 +55,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 3;
+  z-index: 1;
   background-color: #e07d6a;
-}
-
-.fullpagemenu .closebtn .close-wrap {
-  position: relative;
-  width: 100%;
-  cursor: pointer;
-}
-
-.fullpagemenu .closebtn .line {
-  position: absolute;
-}
-
-.fullpagemenu .closebtn .line:nth-child(1) {
-  -webkit-transform: rotate(330deg);
-          transform: rotate(330deg);
-}
-
-.fullpagemenu .closebtn .line:nth-child(2) {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
 }
 
 .fullpagemenu .logowrap {

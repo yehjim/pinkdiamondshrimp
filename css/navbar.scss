@@ -26,6 +26,7 @@ $main_color:#e07d6a;
         .fix-buybtn{
             display: flex;
             left: 83%;
+            color: white;
         }
     }
 }
@@ -55,6 +56,8 @@ $main_color:#e07d6a;
         .fix-buybtn{
             display: flex;
             left: 85%;
+            color: white;            
+            // z-index: 2;
         }
     }
     
@@ -85,6 +88,7 @@ $main_color:#e07d6a;
         .fix-buybtn{
             display: flex;
             left: 90%;
+            color: white;
         }
     }
 }
@@ -109,6 +113,7 @@ $main_color:#e07d6a;
         }
         .fix-buybtn{
             display: none;
+            color: white;
         }
     }
 }
@@ -121,10 +126,9 @@ $main_color:#e07d6a;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding-top: 30px;
     width: 100%;
-    // border: solid 1px;
    
     .logotype{
         // border: solid 1px;
@@ -205,7 +209,7 @@ $main_color:#e07d6a;
         // left:87%;
         // left: 95vw;
         top: 129px;
-        color: white;
+       
 
         span{
           

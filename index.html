@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/fullpagemenu.css">
     <link rel="stylesheet" href="./css/branding.css">
+    <link rel="stylesheet" href="./css/features.css">
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <title>Document</title>
@@ -29,7 +30,10 @@
                 <span class="body">粉鑽蝦 | 台東知本</span>
             </div>
             <div class="navitems">
-                <div class="item subtitle">品牌介紹 <span class="decoline"></span></div>
+                <a href="#branding">
+                    <div class="item subtitle">品牌介紹 <span class="decoline"></span></div>
+                </a>
+                
                 <div class="item subtitle">產品特色 <span class="decoline"></span></div>
                 <div class="item subtitle">聯絡我們 <span class="decoline"></span></div>
                 <div class="item subtitle buybtn">立即訂購</div>
@@ -58,7 +62,7 @@
 
 
         </div>
-        <div class="branding">
+        <div class="branding" id="branding">
             <div class="intro-pic">
                 <img class="labtoppic" src="./assests/intro_desktop.jpg" alt="">
                 <img class="tabletpic" src="./assests/intro_tablet.jpg" alt="">
@@ -144,25 +148,24 @@
                 </div>
             </div>
         </div>
-        <div class="fullpagemenu" v-show="fullpageshow">
-            <div class="closebtn">
-                <div class="close-wrap" @click="closefullpagemenu">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-
-
+        <div class="features" id="features">
+            <div class="title">
+                <span class="title2">粉鑽蝦特色</span>
+                <span class="title3">粉鑽蝦特色</span>
             </div>
+
+        </div>
+        <div class="fullpagemenu" v-show="fullpageshow">
             <div class="logowrap">
                 <img src="./assests/logowhite.svg" alt="">
             </div>
             <div class="fullpagemenu-nav">
-
-                <li class="subtitle">品牌介紹</li>
+                <a href="#branding">
+                    <li class="subtitle" @click="openfullpagemenu">品牌介紹</li>
+                </a>
+               
                 <li class="subtitle">粉鑽蝦特色</li>
                 <li class="subtitle">聯絡我們</li>
-
-
             </div>
             <div class="fullpagemenu-contactinfo">
                 <div class="wrap">
@@ -172,7 +175,7 @@
                             <path
                                 d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z"
                                 fill="rgba(255,255,255,1)" /></svg>
-                        <span>@408phymh</span>
+                        <span class="body">@408phymh</span>
                     </div>
                     <div class="location">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -180,7 +183,7 @@
                             <path
                                 d="M11 17.938A8.001 8.001 0 0 1 12 2a8 8 0 0 1 1 15.938v2.074c3.946.092 7 .723 7 1.488 0 .828-3.582 1.5-8 1.5s-8-.672-8-1.5c0-.765 3.054-1.396 7-1.488v-2.074zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
                                 fill="rgba(255,255,255,1)" /></svg>
-                        <span>台東市康定街379號</span>
+                        <span class="body">台東市康定街379號</span>
                     </div>
                     <div class="phone">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -188,7 +191,7 @@
                             <path
                                 d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"
                                 fill="rgba(255,255,255,1)" /></svg>
-                        <span>+886 932-070-517</span>
+                        <span class="body">+886 932-070-517</span>
                     </div>
                 </div>
 
@@ -200,7 +203,7 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
         integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
