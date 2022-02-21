@@ -75,12 +75,20 @@
   height: 100vh;
   width: 100vw;
   max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .cover-area .pic .labtoppic, .cover-area .pic .tabletpic, .cover-area .pic .phonepic {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  width: 100%;
 }
 
 .cover-area .logowrap {
