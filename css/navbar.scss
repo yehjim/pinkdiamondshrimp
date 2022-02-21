@@ -25,6 +25,7 @@ $main_color:#e07d6a;
         }
         .fix-buybtn{
             display: flex;
+            left: 83%;
         }
     }
 }
@@ -53,6 +54,7 @@ $main_color:#e07d6a;
         }
         .fix-buybtn{
             display: flex;
+            left: 85%;
         }
     }
     
@@ -82,6 +84,7 @@ $main_color:#e07d6a;
         }
         .fix-buybtn{
             display: flex;
+            left: 90%;
         }
     }
 }
@@ -96,6 +99,9 @@ $main_color:#e07d6a;
             .body{
                 display: none;
             }
+        }
+        .item{
+            display: flex;
         }
         .hammenu{
             display: none;
@@ -132,15 +138,43 @@ $main_color:#e07d6a;
        
         .item{
             margin-left: 24px;
+            cursor: pointer;
+           
+            // display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .decoline{
+                border: solid 1px;
+                opacity: 0;
+                width: 0%;
+                transition: 0.5s;
+            }
+            
+            
         }
+        .item:hover{
+            .decoline{
+                opacity: 1;
+                  // border: solid 1px;
+                width: 100%;
+            }
+            // transform: scale(1.05);
+        }
+       
+            
         .buybtn{
             background-color: $main_color;
             color: white;
             border-radius: 5px;
             padding: 10px;
+            transition: 0.3s;
 
         }
+        .buybtn:hover{
+            background-color: #BA6758;
+        }
         .hammenu{
+            cursor: pointer;
             .line{
                 
                 border-radius: 50px;
@@ -161,15 +195,21 @@ $main_color:#e07d6a;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        writing-mode: vertical-lr;
+        // letter-spacing: 10px;
         padding: 2px;
         border-radius: 5px;
         background-color: $main_color;
         position: fixed;
-        left: 85%;
+       
         // left:87%;
         // left: 95vw;
         top: 129px;
+        color: white;
 
+        span{
+          
+
+        }
     }
 }

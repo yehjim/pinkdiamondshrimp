@@ -23,6 +23,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    left: 83%;
   }
 }
 
@@ -51,6 +52,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    left: 85%;
   }
 }
 
@@ -79,6 +81,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    left: 90%;
   }
 }
 
@@ -92,6 +95,11 @@
   }
   .navbar .logotype .body {
     display: none;
+  }
+  .navbar .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .navbar .hammenu {
     display: none;
@@ -135,6 +143,27 @@
 
 .navbar .navitems .item {
   margin-left: 24px;
+  cursor: pointer;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .navitems .item .decoline {
+  border: solid 1px;
+  opacity: 0;
+  width: 0%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar .navitems .item:hover .decoline {
+  opacity: 1;
+  width: 100%;
 }
 
 .navbar .navitems .buybtn {
@@ -142,6 +171,16 @@
   color: white;
   border-radius: 5px;
   padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .navitems .buybtn:hover {
+  background-color: #BA6758;
+}
+
+.navbar .navitems .hammenu {
+  cursor: pointer;
 }
 
 .navbar .navitems .hammenu .line {
@@ -166,11 +205,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
   padding: 2px;
   border-radius: 5px;
   background-color: #e07d6a;
   position: fixed;
-  left: 85%;
   top: 129px;
+  color: white;
 }
 /*# sourceMappingURL=navbar.css.map */

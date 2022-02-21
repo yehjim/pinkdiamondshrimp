@@ -1,0 +1,129 @@
+$main_color:#e07d6a;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+@media (max-width: 767px) {
+
+    .labtoppic,
+    .phonepic {
+        display: none;
+    }
+
+    .tabletpic {
+        display: block;
+    }
+
+    .logo {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .labtoppic,
+    .tabletpic {
+        display: none;
+    }
+
+    .phonepic {
+        display: block;
+    }
+    .logo {
+        width: 216px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .tabletpic,
+    .phonepic {
+        display: none;
+    }
+
+    .labtoppic {
+        display: block;
+    }
+
+    .logo {
+        width: 461px;
+    }
+}
+
+@media (min-width: 980px) {
+    .labtoppic {
+        display: block;
+    }
+
+    .tabletpic,
+    .phonepic {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {}
+
+.cover-area,
+.branding {
+    width: 100vw;
+    // border: solid 1px;
+    // height: 100vh;
+
+}
+
+.cover-area {
+    position: relative;
+
+    .pic {
+
+        // height: 100%;
+        max-height: 100vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+        // position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            // width: 110%;
+            // height: 100%;
+        }
+
+        
+
+        // background-image: url('/assests/mainpage_cover_labtop.jpg');
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
+    }
+
+    .logowrap {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+
+            opacity: 0;
+            
+            // transform: scale(0.5);
+
+        }
+    }
+
+}

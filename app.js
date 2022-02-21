@@ -1,3 +1,20 @@
+
+var app = new Vue({
+    el:'#app',
+    data:{
+        fullpageshow:false
+    },
+    methods: {
+        closefullpagemenu(){
+            console.log('123')
+            this.fullpageshow = false
+        },
+        openfullpagemenu(){
+            this.fullpageshow = true
+        }
+    },
+})
+
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
@@ -17,7 +34,7 @@ ScrollTrigger.create({
     animation: tl,
     trigger: ".cover-area",
     start: "top top",
-    end: "+=4000",
+    end: "+=3000",
     duration:1000,
     scrub: 0.5,
     pin: true,

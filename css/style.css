@@ -16,17 +16,20 @@
     display: block;
   }
   .logo {
-    width: 300px;
+    width: 290px;
   }
 }
 
 @media (max-width: 480px) {
   .labtoppic,
-  .tabletpic {
+  .phonepic {
     display: none;
   }
-  .phonepic {
+  .tabletpic {
     display: block;
+  }
+  .logo {
+    width: 216px;
   }
 }
 
@@ -39,7 +42,7 @@
     display: block;
   }
   .logo {
-    width: 461px;
+    width: 350px;
   }
 }
 
@@ -53,14 +56,20 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .labtoppic {
+    width: 100%;
+  }
+}
+
 .cover-area,
 .branding {
   width: 100vw;
-  height: 100vh;
 }
 
 .cover-area {
   position: relative;
+  height: 100vh;
 }
 
 .cover-area .pic {
@@ -68,6 +77,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -76,13 +88,12 @@
 
 .cover-area .pic img {
   width: 100%;
-  height: auto;
 }
 
 .cover-area .logowrap {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
   display: -webkit-box;
