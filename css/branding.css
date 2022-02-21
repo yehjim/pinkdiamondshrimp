@@ -3,6 +3,9 @@
     display: none;
   }
   .tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -34,6 +37,9 @@
   .introblock {
     display: block;
   }
+  .tech {
+    display: none;
+  }
   .tech .title .title2 {
     display: none;
   }
@@ -53,6 +59,9 @@
     display: none;
   }
   .tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -82,6 +91,9 @@
     display: none;
   }
   .tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -162,9 +174,6 @@
 }
 
 .branding .tech {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 144px;
 }
 
