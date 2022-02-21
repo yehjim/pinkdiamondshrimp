@@ -22,14 +22,14 @@
 
 @media (max-width: 480px) {
   .labtoppic,
-  .phonepic {
+  .tabletpic {
     display: none;
   }
-  .tabletpic {
+  .phonepic {
     display: block;
   }
   .logo {
-    width: 216px;
+    width: 170px;
   }
 }
 
@@ -69,31 +69,24 @@
 
 .cover-area {
   position: relative;
-  height: 100vh;
 }
 
 .cover-area .pic {
+  height: 100vh;
+  width: 100vw;
   max-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
 }
 
-.cover-area .pic img {
+.cover-area .pic .labtoppic, .cover-area .pic .tabletpic, .cover-area .pic .phonepic {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   width: 100%;
 }
 
 .cover-area .logowrap {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   display: -webkit-box;
