@@ -71,9 +71,9 @@ tl.to(".pic > img", {
 
 ScrollTrigger.create({
     animation: tl,
-    trigger: "#app",
+    trigger: ".cover-area",
     start: "top top",
-    end: "+=2300",
+    end: "+=1500",
     duration: 1000,
     scrub: 0.5,
     pin: true,
