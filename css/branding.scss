@@ -126,14 +126,15 @@ $text_dark:#0d1d22;
     }
 }
 @media (min-width: 1200px) {
-    .imgwrap{
-        margin-right: 40px;
-        flex: 6;
-    }
+   
     .tech-content{
         flex: 6;
     }
     .tech{
+        .imgwrap{
+            margin-right: 40px;
+            flex: 6;
+        }
         flex-direction: row;
         padding-left: 122px;
         padding-right: 122px;

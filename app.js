@@ -50,6 +50,16 @@ var app = new Vue({
 
         }
     },
+    mounted() {
+        // anime({
+        //     targets: '.logowrap img',
+        //     rotate:15,
+        //     direction: 'alternate',
+        //     loop:true,
+        //     duration: 100,
+        //     // delay:300
+        // });
+    },
 })
 
 gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +70,7 @@ tl.to(".pic > img", {
         opacity: 0,
 
         duration: 1.5,
-        scale: 0.9
+        scale: 0.8
     })
     .to(".logo", {
         opacity: 1,

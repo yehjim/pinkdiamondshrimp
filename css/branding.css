@@ -119,12 +119,6 @@
 }
 
 @media (min-width: 1200px) {
-  .imgwrap {
-    margin-right: 40px;
-    -webkit-box-flex: 6;
-        -ms-flex: 6;
-            flex: 6;
-  }
   .tech-content {
     -webkit-box-flex: 6;
         -ms-flex: 6;
@@ -137,6 +131,12 @@
             flex-direction: row;
     padding-left: 122px;
     padding-right: 122px;
+  }
+  .tech .imgwrap {
+    margin-right: 40px;
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
   }
   .tech .title {
     margin: 0;
