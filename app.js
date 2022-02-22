@@ -91,11 +91,6 @@ var app = new Vue({
             } else {
                 this.fullpageshow = true
                 anime({
-                    targets: '.fullpagemenu',
-                    opacity: [0, 1],
-                    duration: 2000
-                });
-                anime({
                     targets: '.hammenu .line:nth-child(1) ',
                     backgroundColor: '#fff',
                     rotate: 30,
