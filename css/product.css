@@ -1,0 +1,219 @@
+@media (max-width: 767px) {
+  .product {
+    height: 1987px;
+  }
+  .product-flexwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-flexwrap .bigshrimp {
+    margin-top: 150px;
+  }
+  .mobileproduct {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    height: 852px;
+  }
+  .product .product-flexwrap {
+    display: none;
+  }
+  .mobileproduct {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .product {
+    height: 1987px;
+  }
+  .product-flexwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-flexwrap .bigshrimp {
+    margin-top: 150px;
+  }
+  .mobileproduct {
+    display: none;
+  }
+}
+
+@media (min-width: 980px) {
+  .product {
+    height: 966px;
+  }
+  .product .product-flexwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .product .mobileproduct {
+    display: none;
+  }
+}
+
+.product {
+  background-color: #e07d6a;
+  margin-top: 155px;
+  padding-top: 87px;
+}
+
+.product .product-flexwrap .shrimp {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .product-flexwrap .shrimp .productname {
+  margin-top: 72px;
+}
+
+.product .product-flexwrap .shrimp .price {
+  margin-top: 24px;
+}
+
+.product .product-flexwrap .shrimp .content {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.product .product-flexwrap .shrimp .imgwrap img {
+  max-height: 307px;
+  border-radius: 5px;
+}
+
+.product .product-flexwrap .bigshrimp {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .product-flexwrap .bigshrimp .productname {
+  margin-top: 72px;
+}
+
+.product .product-flexwrap .bigshrimp .price {
+  margin-top: 24px;
+}
+
+.product .product-flexwrap .bigshrimp .content {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.product .product-flexwrap .bigshrimp .imgwrap img {
+  max-height: 307px;
+  border-radius: 5px;
+}
+
+.product .buybtn {
+  cursor: pointer;
+  width: 250px;
+  margin: auto;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: white;
+  color: #e07d6a;
+}
+
+.product .mobileproduct {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  text-align: center;
+}
+
+.product .mobileproduct .imgwrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product .mobileproduct .imgwrap img {
+  width: 100%;
+  border-radius: 5px;
+  max-height: 209px;
+}
+
+.product .mobileproduct .productname {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product .mobileproduct .productname span {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.product .mobileproduct .productname svg {
+  cursor: pointer;
+  fill: white;
+  width: 50px;
+}
+
+.product .mobileproduct .price {
+  margin-top: 29px;
+}
+
+.product .mobileproduct .content {
+  margin-top: 29px;
+}
+/*# sourceMappingURL=product.css.map */

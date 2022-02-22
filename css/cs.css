@@ -15,6 +15,9 @@
     padding: 30px;
   }
   .cs-flexwrap .cs-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 30px;
   }
   .cs-flexwrap .cs-content .pic {
@@ -28,6 +31,9 @@
   .cs-flexwrap .cs-content .content-name .body {
     display: block;
   }
+  .cs-flexwrap .cs-content .content-info {
+    width: 300px;
+  }
   .cs-flexwrap .cs-content .content-info .body {
     display: none;
   }
@@ -38,6 +44,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 50px;
   }
 }
 
@@ -54,10 +61,30 @@
             flex-direction: column;
   }
   .cs-flexwrap .cs-info {
-    padding: 30px;
+    padding: 15px;
   }
   .cs-flexwrap .cs-content {
-    padding: 30px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  .cs-flexwrap .cs-content .pic {
+    display: none;
+    margin: 0;
+    margin-right: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: #e07d6a;
+  }
+  .cs-flexwrap .cs-content .content-info {
+    width: 100%;
+  }
+  .switchbtn {
+    padding-top: 20px;
+  }
+  .switchbtn svg {
+    display: none;
   }
 }
 
@@ -75,6 +102,11 @@
   .cs-flexwrap .cs-info {
     padding-left: 50px;
   }
+  .cs-flexwrap .cs-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .cs-flexwrap .cs-content .pic {
     margin-right: 30px;
     width: 93px;
@@ -85,6 +117,9 @@
   }
   .cs-flexwrap .cs-content .content-name .body {
     display: none;
+  }
+  .cs-flexwrap .cs-content .content-info {
+    width: 350px;
   }
   .cs-flexwrap .cs-content .content-info .body {
     display: block;
@@ -97,6 +132,7 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    margin-top: 50px;
   }
 }
 
@@ -116,6 +152,11 @@
   .cs-flexwrap .cs-info {
     padding-left: 10%;
   }
+  .cs-flexwrap .cs-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .cs-flexwrap .cs-content .pic {
     margin-right: 30px;
     width: 93px;
@@ -126,6 +167,9 @@
   }
   .cs-flexwrap .cs-content .content-name .body {
     display: none;
+  }
+  .cs-flexwrap .cs-content .content-info {
+    width: 350px;
   }
   .cs-flexwrap .cs-content .content-info .body {
     display: block;
@@ -138,6 +182,7 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    margin-top: 50px;
   }
 }
 
@@ -164,16 +209,13 @@
 }
 
 .cs .cs-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
 }
 
 .cs .cs-content .content-info {
-  width: 350px;
+  padding-right: 15px;
 }
 
 .cs .cs-content .pic {
@@ -201,7 +243,6 @@
   display: flex;
   width: 100%;
   left: 10%;
-  margin-top: 50px;
 }
 
 .cs .switchbtn svg {
@@ -228,6 +269,13 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
+}
+
+.notcurrentdot {
   background-color: #eaeaea;
+}
+
+.currentdot {
+  background-color: #e07d6a;
 }
 /*# sourceMappingURL=cs.css.map */

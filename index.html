@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/branding.css">
     <link rel="stylesheet" href="./css/features.css">
     <link rel="stylesheet" href="./css/cs.css">
+    <link rel="stylesheet" href="./css/product.css">
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <title>Document</title>
@@ -27,8 +28,13 @@
     <div id="app">
         <nav class="navbar">
             <div class="logotype">
-                <span class="subtitle">粉鑽蝦 | 台東知本</span>
-                <span class="body">粉鑽蝦 | 台東知本</span>
+                <a href="#mainpage">
+                    <span class="subtitle">粉鑽蝦 | 台東知本</span>
+                </a>
+                <a href="#mainpage">
+                    <span class="body">粉鑽蝦 | 台東知本</span>
+                </a>
+                
             </div>
             <div class="navitems">
                 <a href="#branding">
@@ -50,7 +56,7 @@
                 <span class="body">立即訂購</span>
             </div>
         </nav>
-        <div class="cover-area">
+        <div class="cover-area" id="mainpage">
 
             <div class="pic">
                 <img class="labtoppic" src="./assests/mainpage_cover_labtop.jpg" alt="">
@@ -233,7 +239,7 @@
                         <span class="title3">顧客好評推薦</span>
                     </div>
                     <div class="info-content">
-                        <span class="body">簡單說明好評推薦是什麼？</span>
+                        <span class="body">全臺灣都吃得到來自台東知本的好蝦！</span>
                     </div>
                 </div>
                 <div class="cs-content" v-for="(item,index) in cscomment" :key="index" v-show="currentindex==index">
@@ -250,25 +256,94 @@
                     </div>
                 </div>
             </div>
-          
+
             <div class="switchbtn">
-                <svg @click="addindex('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <svg @click="addindex('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                    height="24">
                     <path fill="none" d="M0 0h24v24H0z" />
                     <path
                         d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9V8l-4 4 4 4v-3h4v-2h-4z"
                         fill="rgba(224,125,106,1)" />
                 </svg>
                 <div class="dotwrap">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                    <div v-for="(item,index) in cscomment" :key="index" class="dot"
+                        :class="{currentdot:currentindex==index,notcurrentdot:currentindex!=index}"></div>
                 </div>
-                <svg @click="addindex('add')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <svg @click="addindex('add')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                    height="24">
                     <path fill="none" d="M0 0h24v24H0z" />
                     <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z"
                         fill="rgba(224,125,106,1)" />
                 </svg>
             </div>
+        </div>
+        <div class="product">
+            <div class="product-flexwrap">
+                <div class="shrimp">
+                    <div class="imgwrap">
+                        <img src="./assests/DSC05734.jpg" alt="">
+                    </div>
+                    <div class="productname">
+                        <span class="title2">白蝦</span>
+                    </div>
+                    <div class="price">
+                        <span class="title3">每盒 170 元</span>
+                    </div>
+                    <div class="content">
+                        <span class="subtitle">每隻粉鑽蝦約 13±2 公分 <br>
+                            一盒約 250±30 公克 <br>
+                            每盒約 10-13 尾</span>
+                    </div>
+                </div>
+                <div class="bigshrimp">
+                    <div class="imgwrap">
+                        <img src="./assests/DSC05721.jpg" alt="">
+    
+                    </div>
+                    <div class="productname">
+                        <span class="title2">特大白蝦</span>
+                    </div>
+                    <div class="price">
+                        <span class="title3">每盒 200 元</span>
+                    </div>
+                    <div class="content">
+                        <span class="subtitle">每隻粉鑽蝦約 16±2 公分<br>
+                            一盒約 250±30 公克 <br>
+                            每盒約 8-10 尾
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mobileproduct" v-for="(item,index) in productinfo" :key="index" v-show="index==productindex">
+                <div class="imgwrap">
+                    <img src="./assests/DSC05734.jpg" alt="">
+                </div>
+                <div class="productname">
+                    <svg @click="changeproduct('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                        d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9V8l-4 4 4 4v-3h4v-2h-4z"
+                        />
+                </svg>
+                    <span class="title3">{{item.name}}</span>
+                    <svg @click="changeproduct('add')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z"
+                         />
+                </svg>
+                </div>
+                <div class="price">
+                    <span class="subtitle">每盒 {{item.price}} 元</span>
+                </div>
+                <div class="content">
+                    <span class="body" v-html="item.content"></span>
+                </div>
+            </div>
+           
+            <div class="buybtn">
+                <span class="title3">立即訂購</span>
+            </div>
+
         </div>
         <div class="fullpagemenu" v-show="fullpageshow">
             <div class="logowrap">
