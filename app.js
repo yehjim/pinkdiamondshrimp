@@ -1,9 +1,42 @@
 var app = new Vue({
     el: '#app',
     data: {
-        fullpageshow: false
+        fullpageshow: false,
+        currentindex:0,
+        cscomment:[
+            {
+                name:'新北市 葉先生',
+                content:'粉鑽蝦的蝦子在熱水煮出來後呈現的粉色相較跟一般的草蝦比起來比較淡，但在口味上卻是更加的濃郁'
+            },
+            {
+                name:'台北市 黃先生',
+                content:'蝦子Q彈好吃，水煮、清炒都可以'
+            }
+        ]
     },
     methods: {
+        addindex(st){
+            if(st=='add'){
+                if(this.currentindex=this.cscomment.length){
+                    this.currentindex==this.cscomment.length-1
+                }else{
+                    this.currentindex++;
+                }
+                
+                
+               
+            }else if(st=='minus'){
+                if(this.currentindex<0){
+                    this.currentindex=0
+                }else{
+                    this.currentindex--
+                }
+              
+               
+            }
+            console.log(this.currentindex)
+           
+        },
         openfullpagemenu() {
             if (this.fullpageshow == true) {
                 this.fullpageshow = false

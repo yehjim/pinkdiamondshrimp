@@ -1,0 +1,233 @@
+@media (max-width: 767px) {
+  .cs {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 554px;
+    margin-top: 114px;
+  }
+  .cs-flexwrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cs-flexwrap .cs-info {
+    padding: 30px;
+  }
+  .cs-flexwrap .cs-content {
+    padding: 30px;
+  }
+  .cs-flexwrap .cs-content .pic {
+    margin-right: 14px;
+    width: 60px;
+    height: 60px;
+  }
+  .cs-flexwrap .cs-content .content-name .subtitle {
+    display: none;
+  }
+  .cs-flexwrap .cs-content .content-name .body {
+    display: block;
+  }
+  .cs-flexwrap .cs-content .content-info .body {
+    display: none;
+  }
+  .cs-flexwrap .cs-content .content-info .light {
+    display: block;
+  }
+  .switchbtn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 408px;
+  }
+  .cs-flexwrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cs-flexwrap .cs-info {
+    padding: 30px;
+  }
+  .cs-flexwrap .cs-content {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .cs {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 554px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 135px;
+    padding-top: 50px;
+  }
+  .cs-flexwrap .cs-info {
+    padding-left: 50px;
+  }
+  .cs-flexwrap .cs-content .pic {
+    margin-right: 30px;
+    width: 93px;
+    height: 93px;
+  }
+  .cs-flexwrap .cs-content .content-name .subtitle {
+    display: block;
+  }
+  .cs-flexwrap .cs-content .content-name .body {
+    display: none;
+  }
+  .cs-flexwrap .cs-content .content-info .body {
+    display: block;
+  }
+  .cs-flexwrap .cs-content .content-info .light {
+    display: none;
+  }
+  .switchbtn {
+    padding-right: 125px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (min-width: 980px) {
+  .cs {
+    margin-left: 122px;
+    margin-right: 122px;
+    height: 306px;
+    margin-top: 135px;
+    padding-top: 50px;
+  }
+  .cs-flexwrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cs-flexwrap .cs-info {
+    padding-left: 10%;
+  }
+  .cs-flexwrap .cs-content .pic {
+    margin-right: 30px;
+    width: 93px;
+    height: 93px;
+  }
+  .cs-flexwrap .cs-content .content-name .subtitle {
+    display: block;
+  }
+  .cs-flexwrap .cs-content .content-name .body {
+    display: none;
+  }
+  .cs-flexwrap .cs-content .content-info .body {
+    display: block;
+  }
+  .cs-flexwrap .cs-content .content-info .light {
+    display: none;
+  }
+  .switchbtn {
+    padding-right: 125px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.cs-flexwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cs {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  color: #e07d6a;
+}
+
+.cs .cs-info {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.cs .cs-info .info-content {
+  margin-top: 29px;
+}
+
+.cs .cs-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.cs .cs-content .content-info {
+  width: 350px;
+}
+
+.cs .cs-content .pic {
+  border-radius: 50%;
+  background-color: #e07d6a;
+}
+
+.cs .cs-content .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cs .cs-content .wrap .content-name {
+  margin-bottom: 9px;
+}
+
+.cs .switchbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  left: 10%;
+  margin-top: 50px;
+}
+
+.cs .switchbtn svg {
+  cursor: pointer;
+  width: 30px;
+}
+
+.cs .switchbtn .dotwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 22px;
+  margin-left: 22px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 150px;
+}
+
+.cs .switchbtn .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+}
+/*# sourceMappingURL=cs.css.map */
