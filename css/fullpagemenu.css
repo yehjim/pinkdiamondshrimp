@@ -47,6 +47,9 @@
     border-radius: 50px;
     background-color: white;
   }
+  .fullpagemenu {
+    display: none;
+  }
 }
 
 .fullpagemenu {
@@ -111,5 +114,10 @@
 
 .fullpagemenu .lineid svg, .fullpagemenu .location svg, .fullpagemenu .phone svg {
   margin-right: 29px;
+}
+
+.fullpagemenu .phone span {
+  color: white;
+  text-decoration: none;
 }
 /*# sourceMappingURL=fullpagemenu.css.map */

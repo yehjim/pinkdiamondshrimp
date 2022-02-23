@@ -123,6 +123,15 @@ $main_color:#e07d6a;
 }
 .sticky{
     background-color: white;
+    // .hammenu{
+    //     .line{
+    //         background-color: $main_color;
+    //     }
+    // }
+}
+.fullpagesticky{
+    background-color: $main_color;
+
 }
 .navbar{
     transition: 0.3s;
@@ -135,7 +144,7 @@ $main_color:#e07d6a;
     padding-top: 30px;
     width: 100%;
     // background-color: white;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
    
     .logotype{
         // border: solid 1px;
@@ -207,20 +216,21 @@ $main_color:#e07d6a;
         justify-content: center;
         align-items: center;
         writing-mode: vertical-lr;
-        // letter-spacing: 10px;
+
         padding: 2px;
         border-radius: 5px;
         background-color: $main_color;
         position: fixed;
-       
-        // left:87%;
-        // left: 95vw;
         top: 129px;
+        cursor: pointer;
        
 
         span{
           
 
         }
+    }
+    .fixbuybtnmenuopen{
+        opacity: 0;
     }
 }

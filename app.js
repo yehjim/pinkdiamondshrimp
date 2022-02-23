@@ -4,6 +4,7 @@ var app = new Vue({
         fullpageshow: false,
         currentindex: 0,
         productindex:0,
+        windowsize:'big',
         cscomment: [{
                 name: '花蓮市 陳媽媽',
                 content: '每隻蝦都很大，而且急速冷凍，完好無斷頭斷尾，完全無腥味！'
@@ -31,7 +32,7 @@ var app = new Vue({
             if (st == 'add') {
                 this.productindex++;
                 if (this.productindex == this.productinfo.length) {
-                    this.productindex = this.productinfo.length - 1;
+                    this.productindex = 0
                 }
 
 
@@ -40,7 +41,7 @@ var app = new Vue({
             } else if (st == 'minus') {
                 this.productindex--
                 if (this.productindex == -1) {
-                    this.productindex = 0
+                    this.productindex = this.productinfo.length-1
                 }
 
 
@@ -51,7 +52,7 @@ var app = new Vue({
             if (st == 'add') {
                 this.currentindex++;
                 if (this.currentindex == this.cscomment.length) {
-                    this.currentindex = this.cscomment.length - 1;
+                    this.currentindex = 0;
                 }
 
 
@@ -60,7 +61,7 @@ var app = new Vue({
             } else if (st == 'minus') {
                 this.currentindex--
                 if (this.currentindex == -1) {
-                    this.currentindex = 0
+                    this.currentindex = this.cscomment.length-1
                 }
 
 
@@ -108,13 +109,40 @@ var app = new Vue({
                 });
             }
 
+        },
+        onResize(){
+            if(window.innerWidth > 960){
+                this.windowsize = 'big'
+            }else if(window.innerWidth < 960 && window.innerWidth > 480){
+                this.windowsize = 'mid'
+            }else{
+                this.windowsize = 'small'
+            }
+        },
+        scrolltotop(){
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0;
         }
+    },
+    created() {
+        window.addEventListener('resize', this.onResize)
+        if(window.innerWidth > 960){
+            this.windowsize = 'big'
+        }else if(window.innerWidth < 960 && window.innerWidth > 480){
+            this.windowsize = 'mid'
+        }else{
+            this.windowsize = 'small'
+        }
+    },
+    beforeDestroy() {
+        window.addEventListener('resize', this.onResize)
     },
     mounted() {
         window.addEventListener("scroll", function () {
             var navbar = document.querySelector(".navbar")
             navbar.classList.toggle("sticky", window.scrollY > 0)
           })
+       
         // anime({
         //     targets: '.logowrap img',
         //     rotate:15,

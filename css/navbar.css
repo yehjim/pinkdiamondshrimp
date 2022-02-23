@@ -117,6 +117,10 @@
   background-color: white;
 }
 
+.fullpagesticky {
+  background-color: #e07d6a;
+}
+
 .navbar {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -134,7 +138,7 @@
   z-index: 2;
   padding-top: 30px;
   width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 .navbar .logotype {
@@ -224,5 +228,10 @@
   background-color: #e07d6a;
   position: fixed;
   top: 129px;
+  cursor: pointer;
+}
+
+.navbar .fixbuybtnmenuopen {
+  opacity: 0;
 }
 /*# sourceMappingURL=navbar.css.map */

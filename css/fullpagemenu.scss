@@ -63,6 +63,9 @@ $main_color:#e07d6a;
         border-radius: 50px;
         background-color: white;
     }
+    .fullpagemenu{
+        display: none;
+    }
     
 }
 @media (min-width: 1200px) {
@@ -108,6 +111,13 @@ $main_color:#e07d6a;
         svg{
             margin-right: 29px;
         }
+    }
+    .phone{
+        span{
+            color: white;
+            text-decoration: none;
+        }
+        
     }
     
 }

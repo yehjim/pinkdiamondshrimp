@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./css/features.css">
     <link rel="stylesheet" href="./css/cs.css">
     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <title>Document</title>
@@ -26,7 +28,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar">
+        <nav class="navbar" :class="{fullpagesticky:fullpageshow==true}">
             <div class="logotype">
                 <a href="#mainpage">
                     <span class="subtitle">粉鑽蝦 | 台東知本</span>
@@ -34,7 +36,7 @@
                 <a href="#mainpage">
                     <span class="body">粉鑽蝦 | 台東知本</span>
                 </a>
-                
+
             </div>
             <div class="navitems">
                 <a href="#branding">
@@ -52,9 +54,9 @@
                 </div>
 
             </div>
-            <div class="fix-buybtn">
+            <!-- <div class="fix-buybtn" :class="{fixbuybtnmenuopen:fullpageshow==true}">
                 <span class="body">立即訂購</span>
-            </div>
+            </div> -->
         </nav>
         <div class="cover-area" id="mainpage">
 
@@ -239,7 +241,7 @@
                         <span class="title3">顧客好評推薦</span>
                     </div>
                     <div class="info-content">
-                        <span class="body">全臺灣都吃得到來自台東知本的好蝦！</span>
+                        <span class="body">全臺灣都吃得到來自東部的好蝦！</span>
                     </div>
                 </div>
                 <div class="cs-content" v-for="(item,index) in cscomment" :key="index" v-show="currentindex==index">
@@ -298,7 +300,7 @@
                 <div class="bigshrimp">
                     <div class="imgwrap">
                         <img src="./assests/DSC05721.jpg" alt="">
-    
+
                     </div>
                     <div class="productname">
                         <span class="title2">特大白蝦</span>
@@ -319,18 +321,17 @@
                     <img src="./assests/DSC05734.jpg" alt="">
                 </div>
                 <div class="productname">
-                    <svg @click="changeproduct('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path
-                        d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9V8l-4 4 4 4v-3h4v-2h-4z"
-                        />
-                </svg>
+                    <svg @click="changeproduct('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9V8l-4 4 4 4v-3h4v-2h-4z" />
+                    </svg>
                     <span class="title3">{{item.name}}</span>
-                    <svg @click="changeproduct('add')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z"
-                         />
-                </svg>
+                    <svg @click="changeproduct('add')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z" />
+                    </svg>
                 </div>
                 <div class="price">
                     <span class="subtitle">每盒 {{item.price}} 元</span>
@@ -339,61 +340,123 @@
                     <span class="body" v-html="item.content"></span>
                 </div>
             </div>
-           
+
             <div class="buybtn">
-                <span class="title3">立即訂購</span>
+                <a href="https://lin.ee/cGFS0Ug">
+                    <span class="title3">立即訂購</span>
+                </a>
+
             </div>
 
         </div>
-        <div class="fullpagemenu" v-show="fullpageshow">
-            <div class="logowrap">
-                <img src="./assests/logowhite.svg" alt="">
+        <div class="contact">
+            <div class="contact-title">
+                <span class="title2" v-show="windowsize=='mid'||windowsize=='big'">聯絡我們</span>
+                <span class="title3" v-show="windowsize=='small'">聯絡我們</span>
             </div>
-            <div class="fullpagemenu-nav">
-                <a href="#branding">
-                    <li class="subtitle" @click="openfullpagemenu">品牌介紹</li>
-                </a>
-                <a href="#features">
-                    <li class="subtitle" @click="openfullpagemenu">粉鑽蝦特色</li>
-                </a>
+            <div class="lineid">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                        d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z" />
+                </svg>
+                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">@408phymh</span>
+                <span class="body" v-show="windowsize=='small'">@408phymh</span>
+            </div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                        d="M11 17.938A8.001 8.001 0 0 1 12 2a8 8 0 0 1 1 15.938v2.074c3.946.092 7 .723 7 1.488 0 .828-3.582 1.5-8 1.5s-8-.672-8-1.5c0-.765 3.054-1.396 7-1.488v-2.074zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                </svg>
+                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">台東市康定街379號</span>
+                <span class="body" v-show="windowsize=='small'">台東市康定街379號</span>
+            </div>
+            <div class="phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                        d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z" />
+                </svg>
+                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">+886 932-070-517</span>
+                <span class="body" v-show="windowsize=='small'">+886 932-070-517</span>
+            </div>
+            <div class="bglogo">
+                <img src="./logo.svg" alt="">
+            </div>
 
-                <li class="subtitle">聯絡我們</li>
+
+        </div>
+
+        <footer>
+            <div class="logowrap">
+                <img src="./logo.svg" alt="">
+
             </div>
-            <div class="fullpagemenu-contactinfo">
-                <div class="wrap">
-                    <div class="lineid">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path
-                                d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z"
-                                fill="rgba(255,255,255,1)" />
-                        </svg>
-                        <span class="body">@408phymh</span>
+            <span class="body" v-show="windowsize=='mid'||windowsize=='big'">Copyright © 2022 人生本事. All rights
+                reserved.</span>
+            <span class="light" v-show="windowsize=='small'">Copyright © 2022 人生本事.<br> All rights reserved.</span>
+            <div @click="scrolltotop" class="scrolltotop" v-show="windowsize=='mid'||windowsize=='big'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
+                </svg>
+                <span class="subtitle" v-show="windowsize=='big'">回到最上方</span>
+                <span class="body" v-show="windowsize=='mid'">回到最上方</span>
+            </div>
+        </footer>
+        <transition>
+            <div class="fullpagemenu" v-show="fullpageshow">
+                <div class="logowrap">
+                    <img src="./assests/logowhite.svg" alt="">
+                </div>
+                <div class="fullpagemenu-nav">
+                    <a href="#branding">
+                        <li class="subtitle" @click="openfullpagemenu">品牌介紹</li>
+                    </a>
+                    <a href="#features">
+                        <li class="subtitle" @click="openfullpagemenu">粉鑽蝦特色</li>
+                    </a>
+
+                    <li class="subtitle">聯絡我們</li>
+                </div>
+                <div class="fullpagemenu-contactinfo">
+                    <div class="wrap">
+                        <div class="lineid">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                            <span class="body">@408phymh</span>
+                        </div>
+                        <div class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M11 17.938A8.001 8.001 0 0 1 12 2a8 8 0 0 1 1 15.938v2.074c3.946.092 7 .723 7 1.488 0 .828-3.582 1.5-8 1.5s-8-.672-8-1.5c0-.765 3.054-1.396 7-1.488v-2.074zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                            <span class="body">台東市康定街379號</span>
+                        </div>
+                        <div class="phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"
+                                    fill="rgba(255,255,255,1)" />
+                            </svg>
+                            <span class="body">+886 932-070-517</span>
+                        </div>
                     </div>
-                    <div class="location">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path
-                                d="M11 17.938A8.001 8.001 0 0 1 12 2a8 8 0 0 1 1 15.938v2.074c3.946.092 7 .723 7 1.488 0 .828-3.582 1.5-8 1.5s-8-.672-8-1.5c0-.765 3.054-1.396 7-1.488v-2.074zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                                fill="rgba(255,255,255,1)" />
-                        </svg>
-                        <span class="body">台東市康定街379號</span>
-                    </div>
-                    <div class="phone">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z" />
-                            <path
-                                d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"
-                                fill="rgba(255,255,255,1)" />
-                        </svg>
-                        <span class="body">+886 932-070-517</span>
-                    </div>
+
                 </div>
 
+
             </div>
+        </transition>
 
-
-        </div>
 
     </div>
 
