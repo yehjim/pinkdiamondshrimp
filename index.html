@@ -50,7 +50,10 @@
                     <div class="item subtitle">聯絡我們 <span class="decoline"></span></div>
                 </a>
                 
-                <div class="item subtitle buybtn">立即訂購</div>
+                <a href="https://lin.ee/cGFS0Ug">
+                    <div class="item subtitle buybtn">立即訂購</div>
+                </a>
+                
                 <div class="hammenu" @click="openfullpagemenu">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -112,7 +115,7 @@
             </div>
             <div class="tech">
                 <div class="imgwrap">
-                    <img src="./assests/tech.jpg" alt="">
+                    <img @load="onImgLoad" src="./assests/tech.jpg" alt="">
                 </div>
 
                 <div class="tech-content">
@@ -172,7 +175,7 @@
             <div class="one">
                 <div class="imgwrap">
                     <div class="circle"><span class="title3">1</span></div>
-                    <img src="./assests/one.jpg" alt="">
+                    <img @load="onImgLoad" src="./assests/one.jpg" alt="">
                 </div>
                 <div class="contentwrap">
                     <div class="title">
@@ -194,7 +197,7 @@
                 <div class="two">
                     <div class="imgwrap">
                         <div class="circle"><span class="title3">2</span></div>
-                        <img src="./assests/two.jpg" alt="">
+                        <img @load="onImgLoad" src="./assests/two.jpg" alt="">
                     </div>
                     <div class="contentwrap">
                         <div class="title">
@@ -216,7 +219,7 @@
                 <div class="two">
                     <div class="imgwrap">
                         <div class="circle"><span class="title3">3</span></div>
-                        <img src="./assests/three.jpg" alt="">
+                        <img @load="onImgLoad" src="./assests/three.jpg" alt="">
                     </div>
                     <div class="contentwrap">
                         <div class="title">
@@ -288,7 +291,7 @@
             <div class="product-flexwrap">
                 <div class="shrimp">
                     <div class="imgwrap">
-                        <img src="./assests/DSC05734.jpg" alt="">
+                        <img  @load="onImgLoad"src="./assests/DSC05734.jpg" alt="">
                     </div>
                     <div class="productname">
                         <span class="title2">白蝦</span>
@@ -323,7 +326,7 @@
             </div>
             <div class="mobileproduct" v-for="(item,index) in productinfo" :key="index" v-show="index==productindex">
                 <div class="imgwrap">
-                    <img src="./assests/DSC05734.jpg" alt="">
+                    <img @load="onImgLoad" src="./assests/DSC05734.jpg" alt="">
                 </div>
                 <div class="productname">
                     <svg @click="changeproduct('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
