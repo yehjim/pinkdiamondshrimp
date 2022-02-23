@@ -158,8 +158,7 @@ a {
 }
 
 .cover-area .pic .labtoppic, .cover-area .pic .tabletpic, .cover-area .pic .phonepic {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  width: 100vw;
 }
 
 .cover-area .logowrap {

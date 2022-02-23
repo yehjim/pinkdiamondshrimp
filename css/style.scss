@@ -173,7 +173,8 @@ a{
         align-items: center;
         justify-content: center;
         .labtoppic,.tabletpic,.phonepic {
-            transform: scale(1.2);
+            width: 100vw;
+            // transform: scale(1.2);
             
         }
     }
