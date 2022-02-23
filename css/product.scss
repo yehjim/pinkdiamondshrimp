@@ -148,15 +148,20 @@ $main_color:#e07d6a;
             justify-content: center;
             img{
                 width: 100%;
+                max-width: 335px;
                 border-radius: 5px;
                 max-height: 209px;
             }
         }
         .productname{
-            margin-top: 32px;
+            
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            // border: solid 1px;
+            max-width: 335px;
+            margin: auto;
+            margin-top: 32px;
             span{
                 margin-left: 50px;
                 margin-right: 50px;

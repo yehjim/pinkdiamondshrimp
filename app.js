@@ -6,6 +6,7 @@ var app = new Vue({
         productindex: 0,
         windowsize: 'big',
         isloading: true,
+        transitionname:'right-in',
         
         cscomment: [{
                 name: '花蓮市 陳媽媽',
@@ -20,10 +21,12 @@ var app = new Vue({
             }
         ],
         productinfo: [{
+            picurl:'./assests/DSC05734.jpg',
             name: '白蝦',
             price: '170',
             content: '每隻粉鑽蝦約 13±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 10-13 尾'
         }, {
+            picurl:'./assests/DSC05721.jpg',
             name: '特大白蝦',
             price: '200',
             content: '每隻粉鑽蝦約 16±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 8-10 尾'
@@ -37,10 +40,12 @@ var app = new Vue({
         changeproduct(st) {
             if (st == 'add') {
                 this.productindex++;
+               
                 if (this.productindex == this.productinfo.length) {
                     this.productindex = 0
                 }
-
+               
+              
 
 
 
@@ -56,7 +61,9 @@ var app = new Vue({
         },
         addindex(st) {
             if (st == 'add') {
+
                 this.currentindex++;
+                this.transitionname='left-in'
                 if (this.currentindex == this.cscomment.length) {
                     this.currentindex = 0;
                 }
@@ -65,6 +72,7 @@ var app = new Vue({
 
 
             } else if (st == 'minus') {
+                this.transitionname='right-in'
                 this.currentindex--
                 if (this.currentindex == -1) {
                     this.currentindex = this.cscomment.length - 1
@@ -234,14 +242,9 @@ var app = new Vue({
             direction: 'alternate',
             duration: 2000
         });
-        // anime({
-        //     targets: '.logowrap img',
-        //     rotate:15,
-        //     direction: 'alternate',
-        //     loop:true,
-        //     duration: 100,
-        //     // delay:300
-        // });
+       
+       
+        
     },
 })
 

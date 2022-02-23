@@ -25,7 +25,7 @@
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-    <title>Document</title>
+    <title>粉鑽蝦 | 台東知本</title>
 </head>
 
 <body>
@@ -78,8 +78,8 @@
             <!-- <img class="pic" src="./DSC06261.jpg" alt=""> -->
             <div class="scrollhint">
                 <div class="decoline"></div>
-                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">滑 動 查 看 更 多 !</span></span>
-                <span class="body" v-show="windowsize=='small'">滑 動 查 看 更 多 !</span></span>
+                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">滑 動 查 看 更 多</span></span>
+                <span class="body" v-show="windowsize=='small'">滑 動 查 看 更 多</span></span>
             </div>
         </div>
         <div class="branding" id="branding">
@@ -88,7 +88,7 @@
                 <img class="tabletpic" src="./assests/intro_tablet.jpg" alt="">
             </div>
             <div class="introblock">
-                <img src="./assests/intro_1.jpg" alt="">
+                <img src="./assests/DSC06367.jpg" alt="">
                 <div class="title body">
                     <span>用最適合的水 養最好的蝦子</span>
                 </div>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="introblock">
-                <img src="./assests/intro2.png" alt="">
+                <img src="./assests/DSC06062.jpg" alt="">
                 <div class="title body">
                     <span>自然與科技的完美結合</span>
                 </div>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="content">
                         <span class="body">並以專業水質處理技術，提高水中含氧量，保持海水濃度 3.3 度標準，讓白蝦健康有活力！</span>
-                        <span class="light">水源來自珍貴太平洋深層海水，潔淨無污染且富含無機營養鹽與水溶性礦物質。</span>
+                        <span class="light">並以專業水質處理技術，提高水中含氧量並保持海水濃度 3.3 度標準，讓白蝦健康有活力！</span>
                     </div>
                 </div>
 
@@ -257,19 +257,22 @@
                         <span class="body">全臺灣都吃得到來自東部的好蝦！</span>
                     </div>
                 </div>
-                <div class="cs-content" v-for="(item,index) in cscomment" :key="index" v-show="currentindex==index">
-                    <div class="pic"></div>
-                    <div class="wrap">
-                        <div class="content-name">
-                            <span class="subtitle">{{item.name}}</span>
-                            <span class="body">{{item.name}}</span>
-                        </div>
-                        <div class="content-info">
-                            <span class="body">{{item.content}}</span>
-                            <span class="light">{{item.content}}</span>
+                <transition-group tag="div" class="crwrap" :name="transitionname">
+                    <div class="cs-content" v-for="(item,index) in cscomment" :key="index" v-show="currentindex==index">
+                        <div class="pic"></div>
+                        <div class="wrap">
+                            <div class="content-name">
+                                <span class="subtitle">{{item.name}}</span>
+                                <span class="body">{{item.name}}</span>
+                            </div>
+                            <div class="content-info">
+                                <span class="body">{{item.content}}</span>
+                                <span class="light">{{item.content}}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </transition-group>
+                
             </div>
 
             <div class="switchbtn">
@@ -331,7 +334,7 @@
             </div>
             <div class="mobileproduct" v-for="(item,index) in productinfo" :key="index" v-show="index==productindex">
                 <div class="imgwrap">
-                    <img @load="onImgLoad" src="./assests/DSC05734.jpg" alt="">
+                    <img @load="onImgLoad" :src="item.picurl" alt="">
                 </div>
                 <div class="productname">
                     <svg @click="changeproduct('minus')" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -410,10 +413,13 @@
                 reserved.</span>
             <span class="light" v-show="windowsize=='small'">Copyright © 2022 人生本事.<br> All rights reserved.</span>
             <div @click="scrolltotop" class="scrolltotop" v-show="windowsize=='mid'||windowsize=='big'">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
-                </svg>
+                <div class="svgwrap">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
+                    </svg>
+                </div>
+               
                 <span class="subtitle" v-show="windowsize=='big'">回到最上方</span>
                 <span class="body" v-show="windowsize=='mid'">回到最上方</span>
             </div>

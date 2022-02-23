@@ -74,6 +74,34 @@ footer .scrolltotop {
   position: absolute;
 }
 
+footer .scrolltotop .svgwrap {
+  border: solid 2px;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 7px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .scrolltotop .svgwrap:hover {
+  background-color: #e07d6a;
+}
+
+footer .scrolltotop .svgwrap:hover svg {
+  fill: white;
+}
+
 footer .scrolltotop svg {
   fill: #e07d6a;
 }

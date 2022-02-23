@@ -181,21 +181,24 @@
 
 .product .mobileproduct .imgwrap img {
   width: 100%;
+  max-width: 335px;
   border-radius: 5px;
   max-height: 209px;
 }
 
 .product .mobileproduct .productname {
-  margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 335px;
+  margin: auto;
+  margin-top: 32px;
 }
 
 .product .mobileproduct .productname span {

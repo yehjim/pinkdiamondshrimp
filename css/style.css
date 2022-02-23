@@ -159,6 +159,11 @@ a {
           justify-content: center;
 }
 
+.cover-area .pic .labtoppic {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .cover-area .logowrap {
   position: absolute;
   width: 100%;

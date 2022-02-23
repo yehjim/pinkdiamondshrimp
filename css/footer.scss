@@ -59,14 +59,32 @@ footer{
         cursor: pointer;
         display: flex;
         position: absolute;
-        
+        .svgwrap{
+            border: solid 2px;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 7px;
+            transition: 0.3s;
+        }
+        .svgwrap:hover{
+            background-color: $main_color;
+            svg{
+                fill: white;
+            }
+        }
         svg{
             fill: $main_color;
+            // border: solid 1px;
         }
         span{
             writing-mode: vertical-lr;
         }
     }
-
-    
 }
+
+

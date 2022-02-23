@@ -95,6 +95,7 @@ a{
 @media (min-width: 980px) {
     .labtoppic {
         display: block;
+        // transform: scale(1.2);
     }
 
     .tabletpic,
@@ -178,6 +179,9 @@ a{
             // width: 100vw;
             // transform: scale(1.1);
             
+        }
+        .labtoppic{
+            transform: scale(1.2);
         }
     }
 
