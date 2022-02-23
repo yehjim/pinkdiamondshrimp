@@ -5,6 +5,7 @@ var app = new Vue({
         currentindex: 0,
         productindex:0,
         windowsize:'big',
+        isloading:true,
         cscomment: [{
                 name: '花蓮市 陳媽媽',
                 content: '每隻蝦都很大，而且急速冷凍，完好無斷頭斷尾，完全無腥味！'
@@ -28,6 +29,10 @@ var app = new Vue({
         }]
     },
     methods: {
+        onImgLoad(){
+            this.isloading = false
+            console.log(this.isloading)
+        },
         changeproduct(st){
             if (st == 'add') {
                 this.productindex++;
@@ -133,6 +138,7 @@ var app = new Vue({
         }else{
             this.windowsize = 'small'
         }
+        // console.log(this.isloading)
     },
     beforeDestroy() {
         window.addEventListener('resize', this.onResize)
@@ -142,6 +148,72 @@ var app = new Vue({
             var navbar = document.querySelector(".navbar")
             navbar.classList.toggle("sticky", window.scrollY > 0)
           })
+        //   anime({
+        //     targets: '.loadinpage .one',
+        //     easing: 'easeInOutQuad',
+        //     fill:['#fff','#e07d6a'],
+        //     delay: anime.stagger(500) // increase delay by 100ms for each elements.
+        //   });
+
+
+          var tl = anime.timeline({
+            easing: 'easeInOutQuad',
+            duration: 450,
+            loop:true
+            // opacity:[0,1],
+           
+          });
+          tl
+          .add({
+            targets: '.loadinpage .one',
+            fill:['#fff','#e07d6a'],
+          })
+          .add({
+            targets: '.loadinpage .two',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .three',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .four',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .five',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .six',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .seven',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .eight',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .nine',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+          .add({
+            targets: '.loadinpage .ten',
+            fill:['#fff','#e07d6a'],
+            // translateX: 250,
+          })
+         
        
         // anime({
         //     targets: '.logowrap img',

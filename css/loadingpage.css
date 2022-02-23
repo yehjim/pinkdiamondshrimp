@@ -1,0 +1,24 @@
+.loadinpage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.loadinpage .logowrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=loadingpage.css.map */
