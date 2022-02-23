@@ -159,6 +159,11 @@ $text_dark:#0d1d22;
         margin-bottom: 74px; 
         padding-left: 20px;
         padding-right: 20px;
+        .keyword{
+            margin-top: 20px;
+            text-align: center;
+            color: $main_color;
+        }
         img{
             width: 100%;
           

@@ -159,6 +159,12 @@
   padding-right: 20px;
 }
 
+.branding .introblock .keyword {
+  margin-top: 20px;
+  text-align: center;
+  color: #e07d6a;
+}
+
 .branding .introblock img {
   width: 100%;
 }

@@ -127,7 +127,7 @@ var app = new Vue({
         scrolltotop(){
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0;
-        }
+        },
     },
     created() {
         window.addEventListener('resize', this.onResize)
@@ -144,10 +144,17 @@ var app = new Vue({
         window.addEventListener('resize', this.onResize)
     },
     mounted() {
+      
         window.addEventListener("scroll", function () {
             var navbar = document.querySelector(".navbar")
             navbar.classList.toggle("sticky", window.scrollY > 0)
           })
+          var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 700,
+            speedAsDuration: true
+        });
+        //   this.SmoothVerticalScrolling();
+        //   this.SVS_B();
         //   anime({
         //     targets: '.loadinpage .one',
         //     easing: 'easeInOutQuad',
