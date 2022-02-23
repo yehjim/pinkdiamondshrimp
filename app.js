@@ -3,9 +3,10 @@ var app = new Vue({
     data: {
         fullpageshow: false,
         currentindex: 0,
-        productindex:0,
-        windowsize:'big',
-        isloading:true,
+        productindex: 0,
+        windowsize: 'big',
+        isloading: true,
+        
         cscomment: [{
                 name: '花蓮市 陳媽媽',
                 content: '每隻蝦都很大，而且急速冷凍，完好無斷頭斷尾，完全無腥味！'
@@ -18,22 +19,22 @@ var app = new Vue({
                 content: '送來的蝦子肉質很飽滿，吃起來完全不會有粉粉的感覺。'
             }
         ],
-        productinfo:[{
-            name:'白蝦',
-            price:'170',
-            content:'每隻粉鑽蝦約 13±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 10-13 尾'
-        },{
-            name:'特大白蝦',
-            price:'200',
-            content:'每隻粉鑽蝦約 16±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 8-10 尾'
+        productinfo: [{
+            name: '白蝦',
+            price: '170',
+            content: '每隻粉鑽蝦約 13±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 10-13 尾'
+        }, {
+            name: '特大白蝦',
+            price: '200',
+            content: '每隻粉鑽蝦約 16±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 8-10 尾'
         }]
     },
     methods: {
-        onImgLoad(){
+        onImgLoad() {
             this.isloading = false
             console.log(this.isloading)
         },
-        changeproduct(st){
+        changeproduct(st) {
             if (st == 'add') {
                 this.productindex++;
                 if (this.productindex == this.productinfo.length) {
@@ -46,7 +47,7 @@ var app = new Vue({
             } else if (st == 'minus') {
                 this.productindex--
                 if (this.productindex == -1) {
-                    this.productindex = this.productinfo.length-1
+                    this.productindex = this.productinfo.length - 1
                 }
 
 
@@ -66,7 +67,7 @@ var app = new Vue({
             } else if (st == 'minus') {
                 this.currentindex--
                 if (this.currentindex == -1) {
-                    this.currentindex = this.cscomment.length-1
+                    this.currentindex = this.cscomment.length - 1
                 }
 
 
@@ -115,28 +116,32 @@ var app = new Vue({
             }
 
         },
-        onResize(){
-            if(window.innerWidth > 960){
+        onResize() {
+            if (window.innerWidth > 960) {
                 this.windowsize = 'big'
-            }else if(window.innerWidth < 960 && window.innerWidth > 480){
+            } else if (window.innerWidth < 960 && window.innerWidth > 480) {
                 this.windowsize = 'mid'
-            }else{
+            } else {
                 this.windowsize = 'small'
+                
             }
         },
-        scrolltotop(){
+        scrolltotop() {
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0;
         },
     },
     created() {
         window.addEventListener('resize', this.onResize)
-        if(window.innerWidth > 960){
+        if (window.innerWidth > 960) {
             this.windowsize = 'big'
-        }else if(window.innerWidth < 960 && window.innerWidth > 480){
+        } else if (window.innerWidth < 960 && window.innerWidth > 480) {
             this.windowsize = 'mid'
-        }else{
+        } else {
             this.windowsize = 'small'
+          
+           
+
         }
         // console.log(this.isloading)
     },
@@ -144,12 +149,12 @@ var app = new Vue({
         window.addEventListener('resize', this.onResize)
     },
     mounted() {
-      
+
         window.addEventListener("scroll", function () {
             var navbar = document.querySelector(".navbar")
             navbar.classList.toggle("sticky", window.scrollY > 0)
-          })
-          var scroll = new SmoothScroll('a[href*="#"]', {
+        })
+        var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 700,
             speedAsDuration: true
         });
@@ -163,69 +168,69 @@ var app = new Vue({
         //   });
 
 
-          var tl = anime.timeline({
+        var tl = anime.timeline({
             easing: 'easeInOutQuad',
             duration: 450,
-            loop:true
+            loop: true
             // opacity:[0,1],
-           
-          });
-          tl
-          .add({
-            targets: '.loadinpage .one',
-            fill:['#fff','#e07d6a'],
-          })
-          .add({
-            targets: '.loadinpage .two',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .three',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .four',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .five',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .six',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .seven',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .eight',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .nine',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-          .add({
-            targets: '.loadinpage .ten',
-            fill:['#fff','#e07d6a'],
-            // translateX: 250,
-          })
-         
-          anime({
+
+        });
+        tl
+            .add({
+                targets: '.loadinpage .one',
+                fill: ['#fff', '#e07d6a'],
+            })
+            .add({
+                targets: '.loadinpage .two',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .three',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .four',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .five',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .six',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .seven',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .eight',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .nine',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+            .add({
+                targets: '.loadinpage .ten',
+                fill: ['#fff', '#e07d6a'],
+                // translateX: 250,
+            })
+
+        anime({
             targets: '.scrollhint .decoline',
-            height:['30px','100px'],
+            height: ['30px', '100px'],
             easing: 'easeInOutQuad',
-            loop:true,
+            loop: true,
             direction: 'alternate',
             duration: 2000
         });
