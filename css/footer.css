@@ -1,5 +1,5 @@
 @media (max-width: 767px) {
-  .logowrap {
+  .footerlogowrap {
     width: 208px;
   }
   .scrolltotop {
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 480px) {
-  .logowrap {
+  .footerlogowrap {
     width: 150px;
   }
   footer {
@@ -18,7 +18,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  .logowrap {
+  .footerlogowrap {
     width: 208px;
   }
   .scrolltotop {
@@ -27,7 +27,7 @@
 }
 
 @media (min-width: 980px) {
-  .logowrap {
+  .footerlogowrap {
     width: 208px;
   }
   .scrolltotop {
@@ -54,11 +54,11 @@ footer {
   color: #e07d6a;
 }
 
-footer .logowrap {
+footer .footerlogowrap {
   margin-bottom: 38px;
 }
 
-footer .logowrap img {
+footer .footerlogowrap img {
   width: 100%;
 }
 

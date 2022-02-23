@@ -31,6 +31,13 @@ a {
   .logo {
     width: 290px;
   }
+  .scrollhint {
+    left: 40px;
+  }
+  .scrollhint .decoline {
+    margin-right: 10px;
+    width: 3px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -43,6 +50,13 @@ a {
   }
   .logo {
     width: 170px;
+  }
+  .scrollhint {
+    left: 20px;
+  }
+  .scrollhint .decoline {
+    margin-right: 5px;
+    width: 3px;
   }
 }
 
@@ -57,6 +71,13 @@ a {
   .logo {
     width: 350px;
   }
+  .scrollhint {
+    left: 40px;
+  }
+  .scrollhint .decoline {
+    margin-right: 15px;
+    width: 5px;
+  }
 }
 
 @media (min-width: 980px) {
@@ -66,6 +87,13 @@ a {
   .tabletpic,
   .phonepic {
     display: none;
+  }
+  .scrollhint {
+    left: 133px;
+  }
+  .scrollhint .decoline {
+    margin-right: 15px;
+    width: 5px;
   }
 }
 
@@ -95,6 +123,27 @@ a {
 
 .cover-area {
   position: relative;
+}
+
+.cover-area .scrollhint {
+  position: absolute;
+  top: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cover-area .scrollhint .decoline {
+  height: 210px;
+  border-radius: 5px;
+  background-color: #e07d6a;
+}
+
+.cover-area .scrollhint span {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  color: #e07d6a;
 }
 
 .cover-area .pic {

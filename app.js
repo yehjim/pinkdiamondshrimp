@@ -214,7 +214,14 @@ var app = new Vue({
             // translateX: 250,
           })
          
-       
+          anime({
+            targets: '.scrollhint .decoline',
+            height:['30px','100px'],
+            easing: 'easeInOutQuad',
+            loop:true,
+            direction: 'alternate',
+            duration: 2000
+        });
         // anime({
         //     targets: '.logowrap img',
         //     rotate:15,

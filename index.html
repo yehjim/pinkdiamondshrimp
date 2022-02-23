@@ -46,8 +46,10 @@
                 <a href="#features">
                     <div class="item subtitle">產品特色 <span class="decoline"></span></div>
                 </a>
-
-                <div class="item subtitle">聯絡我們 <span class="decoline"></span></div>
+                <a href="#contact">
+                    <div class="item subtitle">聯絡我們 <span class="decoline"></span></div>
+                </a>
+                
                 <div class="item subtitle buybtn">立即訂購</div>
                 <div class="hammenu" @click="openfullpagemenu">
                     <div class="line"></div>
@@ -70,9 +72,11 @@
                 </div>
             </div>
             <!-- <img class="pic" src="./DSC06261.jpg" alt=""> -->
-
-
-
+            <div class="scrollhint">
+                <div class="decoline"></div>
+                <span class="title3" v-show="windowsize=='mid'||windowsize=='big'">滑 動 查 看 更 多 !</span></span>
+                <span class="body" v-show="windowsize=='small'">滑 動 查 看 更 多 !</span></span>
+            </div>
         </div>
         <div class="branding" id="branding">
             <div class="intro-pic">
@@ -350,7 +354,7 @@
             </div>
 
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="contact-title">
                 <span class="title2" v-show="windowsize=='mid'||windowsize=='big'">聯絡我們</span>
                 <span class="title3" v-show="windowsize=='small'">聯絡我們</span>
@@ -390,7 +394,7 @@
         </div>
 
         <footer>
-            <div class="logowrap">
+            <div class="footerlogowrap">
                 <img src="./logo.svg" alt="">
 
             </div>
@@ -418,8 +422,10 @@
                     <a href="#features">
                         <li class="subtitle" @click="openfullpagemenu">粉鑽蝦特色</li>
                     </a>
-
-                    <li class="subtitle">聯絡我們</li>
+                    <a href="#contact">
+                        <li class="subtitle" @click="openfullpagemenu">聯絡我們</li>
+                    </a>
+                    
                 </div>
                 <div class="fullpagemenu-contactinfo">
                     <div class="wrap">

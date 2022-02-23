@@ -33,6 +33,13 @@ a{
     .logo {
         width: 290px;
     }
+    .scrollhint{
+        left: 40px;
+        .decoline{
+            margin-right: 10px;
+            width: 3px;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -51,6 +58,13 @@ a{
     .logo {
         width: 170px;
     }
+    .scrollhint{
+        left: 20px;
+        .decoline{
+            margin-right: 5px;
+            width: 3px;
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -67,6 +81,13 @@ a{
     .logo {
         width: 350px;
     }
+    .scrollhint{
+        left: 40px;
+        .decoline{
+            margin-right: 15px;
+              width: 5px;
+        }
+    }
 }
 
 @media (min-width: 980px) {
@@ -77,6 +98,13 @@ a{
     .tabletpic,
     .phonepic {
         display: none;
+    }
+    .scrollhint{
+        left: 133px;
+        .decoline{
+            margin-right: 15px;
+            width: 5px;
+        }
     }
 
 }
@@ -112,7 +140,29 @@ a{
     position: relative;
 
     // height: 100vh;
-
+    .scrollhint{
+        position: absolute;
+        
+        top: 70vh;
+        display: flex;
+      
+       
+        .decoline{
+          
+            height: 210px;
+            border-radius: 5px;
+            background-color: $main_color;
+          
+        }
+        // padding-bottom: -10px;
+        span{
+            writing-mode: vertical-lr;
+            color: $main_color;
+        }
+        // .mark{
+           
+        // }
+    }
     .pic {
 
         // height: 100%;
