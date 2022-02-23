@@ -51,6 +51,7 @@ a{
 
     .phonepic {
         display: block;
+         transform: scale(0.9);
        
             // transform: scale(0.7);
         
@@ -173,8 +174,8 @@ a{
         align-items: center;
         justify-content: center;
         .labtoppic,.tabletpic,.phonepic {
-            width: 100vw;
-            // transform: scale(1.2);
+            // width: 100vw;
+            // transform: scale(1.1);
             
         }
     }
