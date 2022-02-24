@@ -134,6 +134,7 @@ var app = new Vue({
                 
             }
         },
+        
         scrolltotop() {
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0;
@@ -237,6 +238,17 @@ var app = new Vue({
             loop: true,
             direction: 'alternate',
             duration: 2000
+        });
+
+        anime({
+            targets: '.cover-area .logowrap img',
+            // height: ['30px', '100px'],
+            rotateX:20,
+            // rotateY:30,
+            easing: 'easeInOutQuad',
+            loop: true,
+            direction: 'alternate',
+            duration: 1500
         });
        
        
