@@ -209,6 +209,7 @@
 .cs .crwrap {
   overflow: hidden;
   padding-top: 100px;
+  padding-bottom: 30px;
   margin-bottom: 20px;
   -webkit-box-flex: 6;
       -ms-flex: 6;

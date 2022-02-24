@@ -462,16 +462,21 @@
                 </div>
                 <div class="fullpagemenu-nav">
                     <a href="#branding">
-                        <li class="subtitle" @click="openfullpagemenu">品牌介紹</li>
+                        <li class="subtitle" @click="openfullpagemenu"  v-show="windowsize=='mid'||windowsize=='big'">品牌介紹</li>
+                        <li class="body" @click="openfullpagemenu"  v-show="windowsize=='small'">品牌介紹</li>
                     </a>
                     <a href="#features">
-                        <li class="subtitle" @click="openfullpagemenu">粉鑽蝦特色</li>
+                        <li class="subtitle" @click="openfullpagemenu"  v-show="windowsize=='mid'||windowsize=='big'">粉鑽蝦特色</li>
+                        <li class="body" @click="openfullpagemenu"  v-show="windowsize=='small'">粉鑽蝦特色</li>
                     </a>
                     <a href="#contact">
-                        <li class="subtitle" @click="openfullpagemenu">聯絡我們</li>
+                        <li class="subtitle" @click="openfullpagemenu"  v-show="windowsize=='mid'||windowsize=='big'">聯絡我們</li>
+                        <li class="body" @click="openfullpagemenu"  v-show="windowsize=='small'">聯絡我們</li>
+                       
                     </a>
                     <a href="https://lin.ee/cGFS0Ug">
-                        <li class="subtitle" @click="openfullpagemenu">立即訂購</li>
+                        <li class="subtitle" @click="openfullpagemenu"  v-show="windowsize=='mid'||windowsize=='big'">立即訂購</li>
+                        <li class="body" @click="openfullpagemenu"  v-show="windowsize=='small'">立即訂購</li>
                     </a>
 
                 </div>

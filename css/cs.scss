@@ -235,7 +235,8 @@ $main_color:#e07d6a;
         overflow: hidden;
        
         padding-top: 100px;
-       margin-bottom: 20px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
         flex: 6;
         position: relative;
     }
@@ -261,6 +262,7 @@ $main_color:#e07d6a;
         .content-info{
             color: #30474F;
             padding-right: 15px;
+            // border: solid 1px;
           
         }
         // align-items: center;
