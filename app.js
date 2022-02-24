@@ -166,14 +166,10 @@ var app = new Vue({
             speed: 700,
             speedAsDuration: true
         });
-        //   this.SmoothVerticalScrolling();
-        //   this.SVS_B();
-        //   anime({
-        //     targets: '.loadinpage .one',
-        //     easing: 'easeInOutQuad',
-        //     fill:['#fff','#e07d6a'],
-        //     delay: anime.stagger(500) // increase delay by 100ms for each elements.
-        //   });
+        
+        setInterval(() => {
+            this.addindex('add');
+        }, 5000);
 
 
         var tl = anime.timeline({
