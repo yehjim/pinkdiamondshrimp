@@ -23,13 +23,13 @@ var app = new Vue({
         productinfo: [{
             picurl:'./assests/DSC05734.jpg',
             name: '白蝦',
-            price: '170',
+            price: '150',
             content: '每隻粉鑽蝦約 13±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 10-13 尾'
         }, {
             picurl:'./assests/DSC05721.jpg',
             name: '特大白蝦',
-            price: '200',
-            content: '每隻粉鑽蝦約 16±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 8-10 尾'
+            price: '170',
+            content: '每隻粉鑽蝦約 15±2 公分 <br> 一盒約 250±30 公克 <br> 每盒約 8-10 尾'
         }]
     },
     methods: {
