@@ -120,6 +120,7 @@ $main_color:#e07d6a;
             // border: solid 1px;
             left: 35%;
             opacity: 0.1;
+           
             img{
                 width: 850px;
                 transform: rotate(15deg)
@@ -136,6 +137,9 @@ $main_color:#e07d6a;
     padding-left: 10%;
     overflow: hidden;
     margin-bottom: 200px;
+    .bglogo{
+        z-index: 1;
+    }
     .contact-title{
         // border: solid 1px;
         color: $main_color;
@@ -150,6 +154,10 @@ $main_color:#e07d6a;
             margin-right: 30px;
             fill: $main_color;
         }
+    }
+    .phone{
+        position: absolute;
+        z-index: 2;
     }
    
 

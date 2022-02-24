@@ -129,6 +129,10 @@
   margin-bottom: 200px;
 }
 
+.contact .bglogo {
+  z-index: 1;
+}
+
 .contact .contact-title {
   color: #e07d6a;
 }
@@ -146,5 +150,10 @@
 .contact .lineid svg, .contact .phone svg, .contact .location svg {
   margin-right: 30px;
   fill: #e07d6a;
+}
+
+.contact .phone {
+  position: absolute;
+  z-index: 2;
 }
 /*# sourceMappingURL=contact.css.map */
