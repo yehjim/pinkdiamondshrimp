@@ -192,10 +192,10 @@
 .cs {
   background-color: #f6f6f6;
   border-radius: 5px;
-  color: #e07d6a;
 }
 
 .cs .cs-info {
+  color: #e07d6a;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
@@ -203,12 +203,13 @@
 
 .cs .cs-info .info-content {
   margin-top: 29px;
+  color: #30474F;
 }
 
 .cs .crwrap {
   overflow: hidden;
   padding-top: 100px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
@@ -222,13 +223,13 @@
   height: 100%;
 }
 
-.cs .cs-content .content-info {
-  padding-right: 15px;
+.cs .cs-content .content-name {
+  color: #e07d6a;
 }
 
-.cs .cs-content .pic {
-  border-radius: 50%;
-  background-color: #e07d6a;
+.cs .cs-content .content-info {
+  color: #30474F;
+  padding-right: 15px;
 }
 
 .cs .cs-content .wrap {

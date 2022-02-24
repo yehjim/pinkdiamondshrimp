@@ -160,6 +160,13 @@
   border-radius: 50px;
   background-color: white;
   color: #e07d6a;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.product .buybtn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .product .mobileproduct {

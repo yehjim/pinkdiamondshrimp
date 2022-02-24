@@ -410,6 +410,10 @@
   color: #e07d6a;
 }
 
+.features .one .contentwrap .content {
+  color: #30474F;
+}
+
 .features .two {
   -webkit-box-flex: 6;
       -ms-flex: 6;
@@ -441,5 +445,9 @@
 
 .features .two .contentwrap {
   color: #e07d6a;
+}
+
+.features .two .contentwrap .content {
+  color: #30474F;
 }
 /*# sourceMappingURL=features.css.map */

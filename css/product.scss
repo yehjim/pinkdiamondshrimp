@@ -133,9 +133,11 @@ $main_color:#e07d6a;
         border-radius: 50px;
         background-color: white;
         color: $main_color;
+        transition: 0.3s all;
     }
     .buybtn:hover{
-        // background-color: ;
+       transform: scale(1.1);
+        // background-color: #BA6758;
     }
     .mobileproduct{
         padding-left: 20px;

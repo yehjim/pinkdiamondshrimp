@@ -211,17 +211,20 @@ $main_color:#e07d6a;
     background-color: #f6f6f6;
     border-radius: 5px;
     
-    color: $main_color;
+    // color: $main_color;
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
     .cs-info {
+         color: $main_color;
         flex: 4;
         // justify-content: center;
 
 
         .info-content {
             margin-top: 29px;
+            color: #30474F;
+            // color: #E9A79A;
         }
         
     }
@@ -232,7 +235,7 @@ $main_color:#e07d6a;
         overflow: hidden;
        
         padding-top: 100px;
-        padding-bottom: 20px;
+       margin-bottom: 20px;
         flex: 6;
         position: relative;
     }
@@ -251,19 +254,17 @@ $main_color:#e07d6a;
         
        
         .content-name{
+            color: $main_color;
+            
             // transform: translateX(-150%);
         }
         .content-info{
+            color: #30474F;
             padding-right: 15px;
           
         }
         // align-items: center;
-        .pic {
-            // transform: translateX(-150%);
-            border-radius: 50%;
-            background-color: $main_color;
-            
-        }
+       
 
         .wrap {
             display: flex;
